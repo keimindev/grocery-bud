@@ -1,13 +1,123 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,600&family=Rampart+One&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --btn-color: rgb(218, 153, 238);
+  --error-color: red;
+  --main-color: #222;
+  --success-color: rgba(114, 243, 135, 0.712);
+  --danger-color: rgba(248, 53, 53, 0.6);
+}
+
+body{
+  background-color: thistle;
+}
+
+.section-center{
+  width: 500px;
+  padding: 50px 50px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 100px;
+  box-shadow: 3px 5px 10px rgba(0,0,0,0.3);
+}
+
+.form-control{
+
+}
+
+h2{
+  font-family: 'Rampart One', cursive;
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+.grocery{ 
+  width: 80%;
+  padding: 8px 10px;
+  border: 0;
+  outline: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: rgba(253, 212, 219, 0.651);
+  font-family: 'Nunito', sans-serif;
+}
+.submit-btn{ 
+  padding: 8px 10px;
+  border: 0;
+  outline: 0;
+  background-color: var(--btn-color);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+}
+
+
+.clear-btn{
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: var(--error-color);
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.grocery-list{
+  padding: 20px 5px;
+}
+.grocery-item{
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.4);
+}
+.btn-container{
+  display: flex;
+}
+
+.edit-btn,
+.delete-btn{
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.edit-btn{
+  color: green;
+  margin-right: 5px;
+}
+.delete-btn{
+  color: var(--error-color);
+}
+
+
+.alert{
+  text-align: center;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  padding: 3px 0;
+  border-radius: 5px;
+}
+
+.alert-danger{
+  background-color: var(--danger-color);
+}
+
+.alert-success{
+  background-color: var(--success-color);
 }
